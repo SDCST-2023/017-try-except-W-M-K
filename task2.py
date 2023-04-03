@@ -7,6 +7,8 @@
 # the error message
 
 #sample output:
+
+
 """
 The reciprocal of 0 does not exist
 The reciprocal of 1 is 1.0
@@ -15,3 +17,12 @@ The reciprocal of 3 is 0.3333333333333333
 The reciprocal of 4 is 0.25
 """
 numbers = [0,1,2,3,4]
+import math
+for num in numbers:
+    try:
+        reciprocal = 1 / num
+        print(f"The reciprocal of {num} is {reciprocal:.2f}")
+    except ZeroDivisionError:
+        print(f"Error: cannot divide by zero ({num})")
+    except TypeError: 
+        print(f"Error: invalid type ({num})")
